@@ -1,0 +1,123 @@
+export const description =
+  'On this page, we’ll dive into the different asset endpoints you can use to manage nft assets programmatically.'
+
+# NFT Asset
+
+As the name suggests, assets are a key element of the NFolio platform. Our goal is to provide you with the tools and insights you need to make informed decisions about your NFT assets. With our API, you can access and manipulate asset data programmatically, using a range of endpoints specifically designed for this purpose. Explore this page to learn more about the various asset endpoints available through our API, and how you can use them to manage your NFT assets more effectively. Whether you are a business, developer, or individual interested in the NFT market, our asset endpoints can help you make the most of your investments. {{ className: 'lead' }}
+
+## The NFT Asset model
+
+The NFT asset model in NFolio contains all the relevant information about your NFTs, including their asset contract address, token id, and estimated value.
+
+### Properties
+
+<Properties>
+  <Property name="asset_id" type="string">
+    Unique identifier for the asset.
+  </Property>
+  <Property name="token_id" type="string">
+    The token id for the asset withing its collection.
+  </Property>
+  <Property name="asset_contract_address" type="string">
+    The contract address of the asset.
+  </Property>
+  <Property name="asset_contract_type" type="string">
+    The contract type of the asset (non-fungible).
+  </Property>
+  <Property name="asset_contract_schema_name" type="string">
+    The contract schema name of the asset, usually it's ERC721.
+  </Property>
+  <Property name="slug" type="string">
+    Unique identifier of the collection.
+  </Property>
+  <Property name="name" type="timestamp">
+    The name of the asset.
+  </Property>
+  <Property name="description" type="timestamp">
+    The description of the asset.
+  </Property>
+  <Property name="external_link" type="timestamp">
+    The external_link of the collection of the asset.
+  </Property>
+  <Property name="image_url" type="timestamp">
+    The image url of the asset.
+  </Property>
+  <Property name="image_preview_url" type="timestamp">
+    The image preview url of the asset.
+  </Property>
+  <Property name="image_thumbnail_url" type="timestamp">
+    The image thumbnail url of the asset.
+  </Property>
+  <Property name="image_original_url" type="timestamp">
+    The original image url of the asset.
+  </Property>
+  <Property name="crawled_all" type="timestamp">
+    -- To be removed --
+  </Property>
+  <Property name="num_sales" type="timestamp">
+    Number of sales of the asset -- To be removed --
+  </Property>
+  <Property name="total_rarity" type="timestamp">
+    The total rarity score of the assets within its collection.
+  </Property>
+  <Property name="last_price" type="timestamp">
+    The last sold price in ETH of the assets during the past 7 days.
+  </Property>
+  <Property name="greatest_trait_value_stat" type="timestamp">
+    The summary statistic of the most valuable trait of the asset.
+  </Property>
+  <Property name="estimated_value" type="timestamp">
+    NFolio estimated value of the asset in ETH.
+  </Property>
+</Properties>
+
+---
+
+## Get details for specific NFT asset {{ tag: 'GET', label: '/v2/nft/{slug}/{token_id}' }}
+
+<Row>
+  <Col>
+
+    This endpoint allows you to retrieve the asset model of the specified NFT by slug and token id.
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/v2/nft/{slug}/{token_id}">
+
+    ```bash {{ title: 'cURL' }}
+    curl -G https://api.nfolio.io/v2/nft/{slug}/{token_id} \
+      -H "x-api-key: {your-api-key}" \
+    ```
+
+    </CodeGroup>
+
+    ```json {{ title: 'Response' }}
+    {
+        "asset_contract_address": "0xed5af388653567af2f388e6224dc7c4b3241c544",
+        "asset_contract_schema_name": "ERC721",
+        "asset_contract_type": "non-fungible",
+        "asset_id": "202832369",
+        "crawled_all": 0,
+        "description": null,
+        "estimated_value": 18.53892489720448,
+        "external_link": null,
+        "greatest_trait_value_stat": 16.8,
+        "image_original_url": "https://ikzttp.mypinata.cloud/ipfs/QmYDvPAXtiJg7s8JdRBSLWdgSphQdac8j1YuQNNxcGE1hg/100.png",
+        "image_preview_url": "https://i.seadn.io/gae/APRxMjKX0avXL5bJpKnh_4P_8U7ipywLyw0m_wqiOR9g_qI6hipLBSTQoc5R5oqCVa6xFZD_yVUicMR5CNnH0Bz71icfle5gh6eX-w?w=500&auto=format",
+        "image_thumbnail_url": "https://i.seadn.io/gae/APRxMjKX0avXL5bJpKnh_4P_8U7ipywLyw0m_wqiOR9g_qI6hipLBSTQoc5R5oqCVa6xFZD_yVUicMR5CNnH0Bz71icfle5gh6eX-w?w=500&auto=format",
+        "image_url": "https://i.seadn.io/gae/APRxMjKX0avXL5bJpKnh_4P_8U7ipywLyw0m_wqiOR9g_qI6hipLBSTQoc5R5oqCVa6xFZD_yVUicMR5CNnH0Bz71icfle5gh6eX-w?w=500&auto=format",
+        "last_price":NaN,
+        "name": "Azuki #100",
+        "num_sales": "0",
+        "slug": "azuki",
+        "token_id": "100",
+        "total_rarity": 678
+    }
+    ```
+
+  </Col>
+</Row>
+
+
+---

@@ -1,0 +1,82 @@
+export const description =
+  'This page provides information about the NFT History endpoints, which allow you to access detailed data about your NFT assets programmatically. Use these endpoints to track and analyze the history of your assets'
+
+# NFT History
+
+This page provides information about the NFT History endpoints, which allow you to access detailed data about your NFT assets programmatically. Use these endpoints to track and analyze the history of your assets {{ className: 'lead' }}
+
+## The NFT History model
+
+The NFT History model in NFolio includes data on the historical estimated price of your NFTs at the intra-daily level. This information can be useful for tracking the value of your assets over time and making more informed investment decisions.
+
+### Properties
+
+<Properties>
+  <Property name="asset_id" type="string">
+    Unique identifier for the asset.
+  </Property>
+  <Property name="token_id" type="string">
+    The token id for the asset withing its collection.
+  </Property>
+  <Property name="asset_contract_address" type="string">
+    The contract address of the asset.
+  </Property>
+  <Property name="result" type="string">
+    The result object with historical details on the estimated price of your asset.
+  </Property>
+</Properties>
+
+---
+
+## Get details for historical estimated price of a specific NFT asset {{ tag: 'GET', label: '/v2/nft_history/{slug}/{token_id}' }}
+
+<Row>
+  <Col>
+
+    This endpoint allows you to retrieve the historical estimated price of the specified NFT by slug and token id.
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/v2/nft_history/{slug}/{token_id}">
+
+    ```bash {{ title: 'cURL' }}
+    curl -G https://api.nfolio.io/v2/nft_history/{slug}/{token_id} \
+      -H "x-api-key: {your-api-key}" \
+    ```
+
+    </CodeGroup>
+
+    ```json {{ title: 'Response' }}
+    {
+        "asset_contract_address": "0xed5af388653567af2f388e6224dc7c4b3241c544",
+        "token_id": "100",
+        "asset_id": "202832369",
+        "results": [
+            {
+                "estimated_timestamp": "2023-01-03 01:00:00",
+                "estimated_value": 19.935250403900543,
+                "greatest_trait_value_stat": 16.8,
+                "last_price":NaN
+            },
+            {
+                "estimated_timestamp": "2023-01-03 13:00:00",
+                "estimated_value": 19.932500244658343,
+                "greatest_trait_value_stat": 16.8,
+                "last_price":NaN
+            },
+            {
+                "estimated_timestamp": "2023-01-04 01:00:00",
+                "estimated_value": 18.033655322522765,
+                "greatest_trait_value_stat": 16.8,
+                "last_price":NaN
+            }
+        ]
+    }
+    ```
+
+  </Col>
+</Row>
+
+
+---
