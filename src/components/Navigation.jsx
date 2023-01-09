@@ -185,11 +185,11 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Guides',
+    title: 'Overview',
     links: [
       { title: 'Introduction', href: '/' },
       { title: 'API Key', href: '/get-api-key' },
-      { title: 'NFT History', href: '/nft-history' },
+      { title: 'Assets', href: '/asset' },
       { title: 'Quickstart', href: '/quickstart' },
       { title: 'SDKs', href: '/sdks' },
       { title: 'Authentication', href: '/authentication' },
@@ -201,7 +201,8 @@ export const navigation = [
   {
     title: 'Resources',
     links: [
-      { title: 'Contacts', href: '/contacts' },
+      { title: 'NFT History', href: '/nft-history'},
+      { title: 'Contacts', href: '/contacts'},
       { title: 'Conversations', href: '/conversations' },
       { title: 'Messages', href: '/messages' },
       { title: 'Groups', href: '/groups' },
