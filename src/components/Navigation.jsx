@@ -190,6 +190,7 @@ export const navigation = [
       { title: 'Introduction', href: '/' },
       { title: 'API Key', href: '/get-api-key' },
       { title: 'Assets', href: '/asset' },
+      { title: 'Collections', href: '/collections' },
       { title: 'Quickstart', href: '/quickstart' },
       { title: 'SDKs', href: '/sdks' },
       { title: 'Authentication', href: '/authentication' },

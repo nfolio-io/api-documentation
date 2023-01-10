@@ -1,0 +1,79 @@
+export const description =
+  'This API call returns a list of available NFolio NFT collections'
+
+# Available Collections
+
+This page provides information about the Collections endpoints, which allow users to see the available NFT Collections in NFolio {{ className: 'lead' }}
+
+## The Collection model
+
+The Collection model in NFolio includes the slug and asset contract address of the available collections in NFolio. This information can be used to filter collections and identify projects that can be evaluated using NFolio data.
+
+### Properties
+
+<Properties>
+  <Property name="slug" type="string">
+    Unique identifier of the collection.
+  </Property>
+  <Property name="token_id" type="string">
+    The token id for the asset withing its collection.
+  </Property>
+</Properties>
+
+---
+
+
+
+## Get Collections {{ tag: 'GET', label: '/v2/collections' }}
+
+<Row>
+  <Col>
+
+    This endpoint allows you to retrieve all the available collections (slug and asset contract address) in NFolio.
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/v2/nft_history/{slug}/{token_id}">
+
+    ```bash {{ title: 'cURL' }}
+    curl -G https://api.nfolio.io/v2/collections \
+      -H "x-api-key: {your-api-key}" \
+    ```
+
+    </CodeGroup>
+
+    ```json {{ title: 'Response' }}
+    [
+       {
+          "asset_contract_address":"0xed5af388653567af2f388e6224dc7c4b3241c544",
+          "slug":"azuki"
+       },
+       {
+          "asset_contract_address":"0x23581767a106ae21c074b2276d25e5c3e136a68b",
+          "slug":"proof-moonbirds"
+       },
+       {
+          "asset_contract_address":"0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b",
+          "slug":"clonex"
+       },
+       {
+          "asset_contract_address":"0x60e4d786628fea6478f785a6d7e704777c86a7c6",
+          "slug":"mutant-ape-yacht-club"
+       },
+       {
+          "asset_contract_address":"0x8a90cab2b38dba80c64b7734e58ee1db38b8992e",
+          "slug":"doodles-official"
+       },
+       {
+          "asset_contract_address":"0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+          "slug":"boredapeyachtclub"
+       }
+    ]
+    ```
+
+  </Col>
+</Row>
+
+
+---

@@ -22,18 +22,47 @@ The NFT History model in NFolio includes data on the historical estimated price 
     The contract address of the asset.
   </Property>
   <Property name="result" type="string">
-    The result object with historical details on the estimated price of your asset.
+    The result object with historical details on the estimated price of your
+    asset.
   </Property>
 </Properties>
 
 ---
 
-## Get details for historical estimated price of a specific NFT asset {{ tag: 'GET', label: '/v2/nft_history/{slug}/{token_id}' }}
+## Get NFT Estimates History {{ tag: 'GET', label: '/v2/nft_history/{slug}/{token_id}' }}
 
 <Row>
   <Col>
 
     This endpoint allows you to retrieve the historical estimated price of the specified NFT by slug and token id.
+
+    ### Required attributes
+
+    <Properties>
+      <Property name="slug" type="string">
+        Unique identifier of the collection.
+      </Property>
+      <Property name="token_id" type="string">
+        The token id for the asset withing its collection.
+      </Property>
+    </Properties>
+
+    ### Optional attributes
+
+    <Properties>
+      <Property name="from_date" type="string">
+        The date used to filter the results from the specified date 'YYYY-MM-DD'.
+      </Property>
+      <Property name="to_date" type="string">
+        The date used to filter the results to the specified date 'YYYY-MM-DD'.
+      </Property>
+      <Property name="limit" type="string">
+        Limit the number of contacts returned.
+      </Property>
+      <Property name="offset" type="string">
+        The desired number of results to skip.
+      </Property>
+    </Properties>
 
   </Col>
   <Col sticky>
@@ -77,6 +106,5 @@ The NFT History model in NFolio includes data on the historical estimated price 
 
   </Col>
 </Row>
-
 
 ---
