@@ -189,8 +189,6 @@ export const navigation = [
     links: [
       { title: 'Introduction', href: '/' },
       { title: 'API Key', href: '/get-api-key' },
-      { title: 'Assets', href: '/asset' },
-      { title: 'Collections', href: '/collections' },
       { title: 'Quickstart', href: '/quickstart' },
       { title: 'SDKs', href: '/sdks' },
       { title: 'Authentication', href: '/authentication' },
@@ -203,6 +201,8 @@ export const navigation = [
     title: 'Resources',
     links: [
       { title: 'NFT History', href: '/nft-history'},
+      { title: 'Assets', href: '/asset' },
+      { title: 'Collections', href: '/collections' },
       { title: 'Contacts', href: '/contacts'},
       { title: 'Conversations', href: '/conversations' },
       { title: 'Messages', href: '/messages' },
