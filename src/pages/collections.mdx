@@ -15,21 +15,19 @@ The Collection model in NFolio includes the slug and asset contract address of t
   <Property name="slug" type="string">
     Unique identifier of the collection.
   </Property>
-  <Property name="token_id" type="string">
-    The token id for the asset withing its collection.
+  <Property name="asset_contract_address" type="string">
+    The contract address of the collection.
   </Property>
 </Properties>
 
 ---
-
-
 
 ## Get Collections {{ tag: 'GET', label: '/v2/collections' }}
 
 <Row>
   <Col>
 
-    This endpoint allows you to retrieve all the available collections (slug and asset contract address) in NFolio.
+    This endpoint allows you to retrieve all the available collections (slug and contract address) in NFolio.
 
   </Col>
   <Col sticky>
@@ -74,6 +72,5 @@ The Collection model in NFolio includes the slug and asset contract address of t
 
   </Col>
 </Row>
-
 
 ---

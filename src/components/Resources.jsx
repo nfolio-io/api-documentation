@@ -10,10 +10,10 @@ import { UsersIcon } from '@/components/icons/UsersIcon'
 
 const resources = [
   {
-    href: '/contacts',
-    name: 'Contacts',
+    href: '/collections',
+    name: 'Collections',
     description:
-      'Learn about the contact model and how to create, retrieve, update, delete, and list contacts.',
+      'API call that returns a list of available NFolio NFT collections.',
     icon: UserIcon,
     pattern: {
       y: 16,
@@ -24,10 +24,10 @@ const resources = [
     },
   },
   {
-    href: '/conversations',
-    name: 'Conversations',
+    href: '/asset',
+    name: 'Assets',
     description:
-      'Learn about the conversation model and how to create, retrieve, update, delete, and list conversations.',
+      'Comprehensive guide that delves into the various asset endpoints for programmatically managing NFT assets. It aims to provide developers with a clear understanding of how to access and manipulate NFT collections using these endpoints.',
     icon: ChatBubbleIcon,
     pattern: {
       y: -6,
@@ -52,10 +52,10 @@ const resources = [
     },
   },
   {
-    href: '/groups',
-    name: 'Groups',
+    href: '/nft-history',
+    name: 'NFT History',
     description:
-      'Learn about the group model and how to create, retrieve, update, delete, and list groups.',
+      'This page provides information on endpoints that allow programmatic access to historical data of NFT assets, enabling developers to track and analyze past performance.',
     icon: UsersIcon,
     pattern: {
       y: 22,
