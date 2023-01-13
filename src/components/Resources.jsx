@@ -27,27 +27,13 @@ const resources = [
     href: '/asset',
     name: 'Assets',
     description:
-      'Comprehensive guide that delves into the various asset endpoints for programmatically managing NFT assets. It aims to provide developers with a clear understanding of how to access and manipulate NFT collections using these endpoints.',
+      '"Guide for programmatically managing NFT assets with various endpoint options, providing developers with clear instructions on how to access and manipulate NFT collections.',
     icon: ChatBubbleIcon,
     pattern: {
       y: -6,
       squares: [
         [-1, 2],
         [1, 3],
-      ],
-    },
-  },
-  {
-    href: '/messages',
-    name: 'Messages',
-    description:
-      'Learn about the message model and how to create, retrieve, update, delete, and list messages.',
-    icon: EnvelopeIcon,
-    pattern: {
-      y: 32,
-      squares: [
-        [0, 2],
-        [1, 4],
       ],
     },
   },
