@@ -18,8 +18,8 @@ export function Layout({ children, sections = [] }) {
         >
           <div className="hidden lg:flex">
             <Link href="/" aria-label="Home">
-              {/* <Logo className="h-6" /> */}
-              NFolio
+              <Logo className="h-6" />
+              {/* NFolio */}
             </Link>
           </div>
           <Header />

@@ -13,7 +13,7 @@ const resources = [
     href: '/collections',
     name: 'Collections',
     description:
-      'API call that returns a list of available NFolio NFT collections.',
+      'API call that returns a list of NFT collections supported and currently available by the NFolio Service.',
     icon: UserIcon,
     pattern: {
       y: 16,
@@ -27,7 +27,7 @@ const resources = [
     href: '/asset',
     name: 'Assets',
     description:
-      '"Guide for programmatically managing NFT assets with various endpoint options, providing developers with clear instructions on how to access and manipulate NFT collections.',
+      'Guide for programmatically managing NFT assets with various endpoint options, providing developers with clear instructions on how to access and manipulate NFT collections.',
     icon: ChatBubbleIcon,
     pattern: {
       y: -6,
