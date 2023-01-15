@@ -23,10 +23,11 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+      <link rel="shortcut icon" href="/src/images/logos/favicon.ico" />
         {router.pathname === '/' ? (
-          <title>Protocol API Reference</title>
+          <title>NFolio API Documentation</title>
         ) : (
-          <title>{`${pageProps.title} - Protocol API Reference`}</title>
+          <title>{`${pageProps.title} - NFolio API Documentation`}</title>
         )}
         <meta name="description" content={pageProps.description} />
       </Head>
