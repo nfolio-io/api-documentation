@@ -25,9 +25,9 @@ export default function App({ Component, pageProps }) {
       <Head>
       <link rel="shortcut icon" href="/src/images/logos/favicon.ico" />
         {router.pathname === '/' ? (
-          <title>NFolio API Documentation</title>
+          <title>napp.ai API Documentation</title>
         ) : (
-          <title>{`${pageProps.title} - NFolio API Documentation`}</title>
+          <title>{`${pageProps.title} - napp.ai API Documentation`}</title>
         )}
         <meta name="description" content={pageProps.description} />
       </Head>
