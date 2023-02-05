@@ -15,7 +15,7 @@ export function Logo(props) {
     // </svg>
 
     <span className='logo'>
-    <span className='text-xl font-bold text-fuchsia-600'>n</span><span className="text-xl font-bold text-slate-900 dark:text-violet-100">app</span> <span className='underscore'></span>
+    <span className='text-xl font-bold text-fuchsia-600'>NF</span><span className="text-xl font-bold text-slate-900 dark:text-violet-100">olio</span> <span className='underscore'></span>
     </span>
 
   )
