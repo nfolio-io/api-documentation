@@ -19,7 +19,7 @@ export function Layout({ children, sections = [] }) {
           <div className="hidden lg:flex">
             <Link href="/" aria-label="Home">
               <Logo className="h-6" />
-              {/* napp.ai */}
+              {/* NFolio */}
             </Link>
           </div>
           <Header />

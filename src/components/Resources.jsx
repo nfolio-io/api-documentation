@@ -13,7 +13,7 @@ const resources = [
     href: '/collections',
     name: 'Collections',
     description:
-      'API call that returns a list of NFT collections supported and currently available by the napp.ai Service.',
+      'API call that returns a list of NFT collections supported and currently available by the NFolio Service.',
     icon: UserIcon,
     pattern: {
       y: 16,
